@@ -1,1 +1,2 @@
 # jesami77-web-project
+Project2 - HTML Foundation Page: The theme for my page is Photos and Travel. I learned that this is a very time consuming process, but very rewarding when you find your errors. Not using CSS was hard becuase I wanted things to look a certain way and couldn't get there with just HTML. 
