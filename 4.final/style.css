@@ -1,0 +1,287 @@
+:root {
+  --deep-forest: #073f17;    
+  --ranger-gold: #C68E3D;    
+  --earth-cream: #FDF9F0;    
+  --evergreen: #3D5A32;
+  --accent-orange: #df7205; /* Burned orange for interactivity */
+}
+
+/* 1. Base Styles */
+body {
+  background-color: var(--deep-forest);
+  color: var(--earth-cream);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+}
+.banner-container {
+    background-color: var(--ranger-gold);
+    display: table;           
+    margin: 20px auto;       
+    padding: 15px 120px;     
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+h1 {
+    color: var(--earth-cream);
+    font-size: 3rem; 
+    margin: 0;                            /* Removes extra space */
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.tagline {
+    color: var(--deep-forest);
+    font-size: 1.1rem;        /* Slightly smaller tagline to match */
+    margin: 5px 0 0 0;        /* Tighter gap between title and tagline */
+    font-weight: bold;
+}
+nav {
+  background-color: var(--evergreen);
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+nav a {
+  color: var(--earth-cream);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT FOR NAV */
+nav a:hover {
+    color: var(--accent-orange);
+}
+
+/* 4. Hero Section & Images */
+.hero-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This pulls Smokey into the center */
+    text-align: center;
+    padding-bottom: 50px;
+}
+.smokey-img {
+    max-width: 500px; /* Adjust size as needed */
+    width: 100%;
+    height: auto;
+    border: 5px solid white; /* Matches your screenshot's white border */
+    border-radius: 4px;
+    margin: 20px auto;
+}
+
+.footprint-text {
+    color: var(--ranger-gold);
+    font-size: 4rem;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+.about-img, .smokey-img {
+    width: 350px;         /* The 'Sweet Spot' size */
+    max-width: 90%;      /* Ensures it doesn't break on small phones */
+    height: auto;        /* Keeps the natural shape of the photo */
+    border: 4px solid var(--ranger-gold);
+    border-radius: 12px;
+    margin: 15px auto;
+    display: block;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* Makes them pop */
+}
+/* 5. Mobile Responsiveness */
+@media (min-width: 601px) {
+    .smokey-img {
+        width: 350px;
+    }
+}
+
+@media (max-width: 900px) {
+    h1 {
+        font-size: 3rem;
+        padding: 20px 40px;
+    }
+    .footprint-text {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+        padding: 10px 20px;
+    }
+    .smokey-img {
+        width: 250px;
+    }
+    .footprint-text {
+        font-size: 1.2rem;
+    }
+}
+css.product-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: var(--evergreen);
+    color: var(--earth-cream);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product-table th, .product-table td {
+    border: 1px solid var(--ranger-gold);
+    padding: 12px;
+    text-align: center;
+}
+
+.product-table th {
+    background-color: var(--ranger-gold);
+    color: var(--deep-forest);
+}
+
+.product-description {
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 1.1rem;
+    color: var(--earth-cream);
+}
+
+/* The state JavaScript will trigger: clear and bright */
+.fade-text {
+    opacity: 0;
+    transform: translateY(20px); /* Starts slightly lower */
+    transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+/* Trigger state for the text */
+.text-active {
+    opacity: 1;
+    transform: translateY(0); /* Moves to original position */
+}
+/* Container for the image and text box */
+.resource-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+}
+
+/* Flips the order for every other row on desktop */
+.resource-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Styling for the text boxes */
+.resource-text {
+    background-color: var(--evergreen);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    flex: 1; /* Takes up equal space */
+    text-align: left;
+}
+
+.resource-img {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid var(--ranger-gold);
+    flex: 1;
+}
+
+/* Mobile Responsiveness: Stack them vertically on phones */
+@media (max-width: 768px) {
+    .resource-row, .resource-row.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .resource-text {
+        text-align: center;
+    }
+}
+.form-container {
+    background-color: var(--evergreen);
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--ranger-gold);
+    font-weight: bold;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--earth-cream);
+    color: var(--deep-forest);
+    font-size: 1rem;
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--earth-cream);
+}
+#topBtn {
+    display: none;             /* Hidden until JS says otherwise */
+    position: fixed;           /* Stay in place on screen */
+    bottom: 30px;              /* Space from bottom */
+    right: 30px;               /* Space from right */
+    z-index: 9999;             /* Stay on top of everything */
+    background-color: var(--ranger-gold);
+    color: var(--deep-forest);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px;             /* Gives the button its size */
+    width: 50px;               /* Width of the circle */
+    height: 50px;              /* Height of the circle */
+    border-radius: 50%;        /* Makes it a perfect circle */
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#topBtn:hover {
+    background-color: var(--accent-orange);
+    transform: scale(1.1);     /* Grows slightly on hover */
+}
+@media (max-width: 600px) {
+    .banner-container {
+        padding: 15px 20px; /* Shinks the width so it fits on a phone */
+        width: 90%;         /* Ensures it stays within the screen edges */
+    }
+}

@@ -1,0 +1,2 @@
+The project was to make a website for GreenTech, a company promoting themselves on sustainability in technology. They wanted a nature inspried site and several tabs. To operate you go to the main page, where you are greeted by a familiar face with a new message. You can click through each tab on the nav bar. Last page has a form to use to get the newsletter and request information. I used my textbook; google; pexels; a word generator and various other websites. 
+
